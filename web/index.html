@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMM7780</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #B8A69B;
+            --secondary: #7B8B6F;
+            --accent: #D4C0B0;
+        }
+        .navbar .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        }
+
+        .brand-logo {
+            height: 40px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo:hover {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+
+        .logo {
+            font-size: 24px;
+            letter-spacing: 1.5px;
+            position: relative;
+            top: 2px;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #888;
+        }
+        .fetchbutton{
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 4px;
+            transition: all 0.3s;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 8px 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        /* Add table styling */
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .team-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .team-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+    </style>
+</head>
+<body class="home-page">
+<nav class="navbar">
+    <div class="container">
+       <div class="logo-container">
+           <img src="logo.jpg" class="brand-logo" alt="Morandi Living Logo">
+           <h1 class="logo">NO PROBLEM</h1>
+       </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">Preprocess</a>
+            <a href="login.html">Word2Vec</a>
+            <a href="purchase.html">Visualization</a>
+        </div>
+    </div>
+</nav>
+
+<section class="title-section container">
+    <h2>COMM7780 & JOUR7280</h2>
+    <h3>Team Name: No problem</h3>
+</section>
+
+<main>
+    <!-- Main banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Analysis of the ***</h1>
+            <p>Explore the methods to ******</p>
+            <!-- <a href="shop.html" class="cta-button">Shop Now</a> -->
+        </div>
+    </section>
+
+    <!-- Featured categories -->
+    <section class="featured-categories container">
+        <div class="category-grid">
+            <a href="shop.html" class="category-card furniture">
+                <div class="category-content">
+                    <h3>Data cleaning</h3>
+                    <p>We use the cleaning functions to clean the data.</p>
+                </div>
+            </a>
+            <a href="shop.html" class="category-card decor">
+                <div class="category-content">
+                    <h3>Word2Vec Method</h3>
+                    <p>We use the vector to check the similarity between words.</p>
+                </div>
+            </a>
+            <a href="shop.html" class="category-card lighting">
+                <div class="category-content">
+                    <h3>Visualization</h3>
+                    <p>We use matplot to demo our analysis.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- New arrivals -->
+    <section class="new-arrival">
+        <div class="container">
+            <h2>Visualization</h2>
+            <div class="product-showcase">
+                <div class="showcase-content">
+                    <h3>Morandi Color Scheme Sofa</h3>
+                    <p>Brand new design, breakthrough comfort experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section class="contact-us container">
+    <h2>Contact Us</h2>
+    <div class="table-container" id="dataContainer">
+        <!-- Visualization will be inserted here -->
+        <div id="visualization"></div>
+
+        <!-- Team information table -->
+        <table class="team-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Student ID</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ruisi GAO</td>
+                    <td>24447862</td>
+                    <td>Data Proprocessing</td>
+                </tr>
+                <tr>
+                    <td>Xinyi SHEN</td>
+                    <td>24447854</td>
+                    <td>NLP Processing</td>
+                </tr>
+                <tr>
+                    <td>Yeping LIU</td>
+                    <td>24455571</td>
+                    <td>Visualization</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</section>
+
+
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2025 COMM 7780. All rights reserved.</p>
+
+        </div>
+      </div>
